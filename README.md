@@ -23,7 +23,7 @@ How does it work?
 -If the identifier is not recognized, the system denies access, and the lock remains engaged.  
 
 Component list  
-Arduino Nano Board: Receives signals from the RFID reader, processes them, and subsequently sends commands to either grant or deny access.  
+Arduino Nano Board: Receives signals from the RFID reader, processes them, and subsequently sends commands to either grant or deny access. https://www.aliexpress.com/item/1005002998391675.html?aff_fcid=bb1f3e13845941a9bd42805b2698ebd4-1733873524735-09483-_DFdXwN9&tt=CPS_NORMAL&aff_fsk=_DFdXwN9&aff_platform=shareComponent-detail&sk=_DFdXwN9&aff_trace_key=bb1f3e13845941a9bd42805b2698ebd4-1733873524735-09483-_DFdXwN9&terminal_id=8ab5d9558887459a9e6c487c8583a49a&afSmartRedirect=y  
 RFID Module RC522: Reads the RFID card or tag presented by the user. If the RFID data aligns with the stored information, it sends a signal to the Arduino for 
 further action.  
 1602A LCD Display: This display module offers feedback to the user. It can showcase messages such as "Access Granted", "Access Denied", or "Scan your RFID card".  
