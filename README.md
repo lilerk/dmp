@@ -26,7 +26,7 @@ Component list
 Arduino Nano Board: Receives signals from the RFID reader, processes them, and subsequently sends commands to either grant or deny access.  
 RFID Module RC522: Reads the RFID card or tag presented by the user. If the RFID data aligns with the stored information, it sends a signal to the Arduino for 
 further action.  
-16x2 I2C LCD Display: This display module offers feedback to the user. It can showcase messages such as "Access Granted", "Access Denied", or "Scan your RFID card".  
+1602A LCD Display: This display module offers feedback to the user. It can showcase messages such as "Access Granted", "Access Denied", or "Scan your RFID card".  
 LED: Indicates lock and unlock status in the system  
 Channel Relay Module: This electrically operated switch is activated when the Arduino sends a command to grant access.  
 Resistor  
