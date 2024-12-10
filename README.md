@@ -1,7 +1,7 @@
 # dmp
 RFID Based Door Lock Security System using Arduino
 
-Project proposal
+Project proposal  
 In this project, I will design an RFID Based Door Lock Security System utilizing the RC5222 Module and Arduino Nano.
 
 An RFID-based door lock security system is an electronic access control system that uses Radio Frequency Identification (RFID) technology to authenticate and grant or
