@@ -12,8 +12,11 @@ RC522 is the highly integrated RFID card reader which works on non-contact 13.56
 size read and write chip, is the best choice in the development of smart meters and portable hand-held devices.
 
 How does it work?
+
 -The user presents their RFID tag/card near the RFID reader.
+
 -The RFID reader generates a low-frequency electromagnetic field that powers the RFID tag (for passive tags).
+
 -The tag transmits its unique identifier back to the reader.
 
 -The RFID reader sends the identifier to the control system.
