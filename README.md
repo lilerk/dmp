@@ -35,6 +35,7 @@ https://www.sunfounder.com/products/i2c-lcd1602-module
 https://www.aliexpress.com/item/1005003479081678.html?aff_fcid=eddcda1305d94fffa757a7bcc85bd404-1733873690326-09414-_DCaRyMj&tt=CPS_NORMAL&aff_fsk=_DCaRyMj&aff_platform=shareComponent-detail&sk=_DCaRyMj&aff_trace_key=eddcda1305d94fffa757a7bcc85bd404-1733873690326-09414-_DCaRyMj&terminal_id=8ab5d9558887459a9e6c487c8583a49a&afSmartRedirect=y  
 -Resistor  
 -Buzzer: Used to produce sounds.  
+-DC motor: Used to unlock a lock.  
 -Capacitor 100uF/35V: Used to filter and smooth out fluctuations or noise in the power supply.  
 -Wires  
 -Breadboard  
