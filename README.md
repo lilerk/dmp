@@ -31,11 +31,12 @@ https://www.sunfounder.com/products/rfid-kit-blue?ref=how2electronics
 -1602A LCD Display: This display module offers feedback to the user. It can showcase messages such as "Access Granted", "Access Denied", or "Scan your RFID card".  
 https://www.sunfounder.com/products/i2c-lcd1602-module  
 -LED: Indicates lock and unlock status in the system  
--Channel Relay Module: This electrically operated switch is activated when the Arduino sends a command to grant access.  
-https://www.aliexpress.com/item/1005003479081678.html?aff_fcid=eddcda1305d94fffa757a7bcc85bd404-1733873690326-09414-_DCaRyMj&tt=CPS_NORMAL&aff_fsk=_DCaRyMj&aff_platform=shareComponent-detail&sk=_DCaRyMj&aff_trace_key=eddcda1305d94fffa757a7bcc85bd404-1733873690326-09414-_DCaRyMj&terminal_id=8ab5d9558887459a9e6c487c8583a49a&afSmartRedirect=y  
 -Resistor  
 -Buzzer: Used to produce sounds.  
--DC motor: Used to unlock a lock.  
--Capacitor 100uF/35V: Used to filter and smooth out fluctuations or noise in the power supply.  
+-servo motor: Used to unlock a lock.  
 -Wires  
 -Breadboard  
+
+![WhatsApp Image 2025-01-07 at 11 40 21 PM (2)](https://github.com/user-attachments/assets/460ea5ba-91d6-49e7-8439-79aec8819e04)
+![WhatsApp Image 2025-01-07 at 11 40 21 PM](https://github.com/user-attachments/assets/b1b2a4cf-a7b8-4a9d-9761-def5884b57bf)
+![WhatsApp Image 2025-01-07 at 11 40 21 PM (1)](https://github.com/user-attachments/assets/4e69471a-c9d4-434c-b1ca-cf3ae80654c0)
