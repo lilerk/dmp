@@ -38,6 +38,7 @@ https://www.sunfounder.com/products/i2c-lcd1602-module
 -Breadboard  
 
 code:  
+```cpp
 #include <SPI.h>
 #include <MFRC522.h>
 #include <LiquidCrystal.h>
@@ -124,7 +125,7 @@ void loop() {
         lcd.print("Scan Your Card");
     }
 }
-
+```
 
 ![WhatsApp Image 2025-01-07 at 11 40 21 PM (2)](https://github.com/user-attachments/assets/460ea5ba-91d6-49e7-8439-79aec8819e04)
 ![WhatsApp Image 2025-01-07 at 11 40 21 PM](https://github.com/user-attachments/assets/b1b2a4cf-a7b8-4a9d-9761-def5884b57bf)
