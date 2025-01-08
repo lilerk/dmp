@@ -37,6 +37,95 @@ https://www.sunfounder.com/products/i2c-lcd1602-module
 -Wires  
 -Breadboard  
 
+code:  
+#include <SPI.h>
+#include <MFRC522.h>
+#include <LiquidCrystal.h>
+#include <Servo.h>
+
+#define SS_PIN 10
+#define RST_PIN 9
+#define SERVO_PIN 8
+#define GREEN_LED A0
+#define RED_LED A1
+#define BUZZER_PIN A2
+
+MFRC522 mfrc522(SS_PIN, RST_PIN);  
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2); 
+Servo doorServo;
+
+//ID: 67 9B B8 B5
+byte authorizedUID[] = {0x67, 0x9B, 0xB8, 0xB5};  
+
+void setup() {
+    Serial.begin(9600);    
+    SPI.begin();           
+    mfrc522.PCD_Init();    
+    lcd.begin(16, 2);      
+    doorServo.attach(SERVO_PIN); 
+    doorServo.write(0);
+    lcd.print("Scan Your Card");  
+
+    pinMode(GREEN_LED, OUTPUT);
+    pinMode(RED_LED, OUTPUT);
+    pinMode(BUZZER_PIN, OUTPUT);
+
+    digitalWrite(GREEN_LED, LOW);
+    digitalWrite(RED_LED, LOW);
+    digitalWrite(BUZZER_PIN, LOW);
+}
+
+void loop() {
+    if (!mfrc522.PICC_IsNewCardPresent() || !mfrc522.PICC_ReadCardSerial()) {
+      return;
+    }
+
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Card UID:");
+
+    for (byte i = 0; i < mfrc522.uid.size; i++) {
+        lcd.print(mfrc522.uid.uidByte[i], HEX);
+        lcd.print(" ");
+    }
+    delay(1000);
+
+    bool authorized = true;
+    for (byte i = 0; i < mfrc522.uid.size; i++) {
+        if (mfrc522.uid.uidByte[i] != authorizedUID[i]) {
+            authorized = false;
+            break;
+        }
+    }
+
+    if (authorized) {
+        lcd.clear();
+        lcd.print("Access Granted!");
+        digitalWrite(GREEN_LED, HIGH);
+        digitalWrite(BUZZER_PIN, HIGH);  
+        doorServo.write(90);
+        delay(5000);
+        digitalWrite(GREEN_LED, LOW);
+        digitalWrite(BUZZER_PIN, LOW);   
+        doorServo.write(0);
+        lcd.clear();
+        lcd.print("Door Locked");
+        delay(2000);
+        lcd.clear();
+        lcd.print("Scan Your Card");
+    } 
+    else {
+        lcd.clear();
+        lcd.print("Access Denied!");
+        digitalWrite(RED_LED, HIGH);
+        delay(3000);
+        digitalWrite(RED_LED, LOW);
+        lcd.clear();
+        lcd.print("Scan Your Card");
+    }
+}
+
+
 ![WhatsApp Image 2025-01-07 at 11 40 21 PM (2)](https://github.com/user-attachments/assets/460ea5ba-91d6-49e7-8439-79aec8819e04)
 ![WhatsApp Image 2025-01-07 at 11 40 21 PM](https://github.com/user-attachments/assets/b1b2a4cf-a7b8-4a9d-9761-def5884b57bf)
 ![WhatsApp Image 2025-01-07 at 11 40 21 PM (1)](https://github.com/user-attachments/assets/4e69471a-c9d4-434c-b1ca-cf3ae80654c0)
